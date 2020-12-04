@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mediciones {{this.nomDisp}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="detalle-sensor"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p>Fecha</p>
+      </ion-col>
+      <ion-col>
+        <p>Medición</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngFor="let m of this.mediciones">
+    <ion-row>
+      <ion-col>
+        {{m.fecha | date: 'dd/MM/yyyy H:mm' }}
+      </ion-col>
+      <ion-col>
+        {{m.valor}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

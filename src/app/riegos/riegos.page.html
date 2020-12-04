@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Riegos Electroválvula {{this.nomValvula}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p>Estado</p>
+      </ion-col>
+      <ion-col>
+        <p>Fecha</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid *ngFor="let r of this.riegos">
+    <ion-row>
+      <ion-col>
+        {{r.apertura}}
+      </ion-col>
+      <ion-col>
+        {{r.fecha | date: 'dd/MM/yyyy H:mm' }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
