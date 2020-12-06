@@ -22,7 +22,7 @@
   <div *ngIf="this.estadoValvula==true">
     <ion-button color="danger" (click)='accionarValvula()'>CERRAR ELECTROVÁLVULA</ion-button>
   </div>
-  <ion-button *ngIf="this.dispositivo" routerLink="/mediciones/{{this.idDispositivo}}" routerDirection="root">
+  <ion-button *ngIf="this.idDispositivo" routerLink="/mediciones/{{this.idDispositivo}}" routerDirection="root">
     VER TODAS LAS MEDICIONES
   </ion-button>
 

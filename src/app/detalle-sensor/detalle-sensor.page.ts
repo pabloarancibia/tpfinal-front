@@ -168,7 +168,7 @@ export class DetalleSensorPage implements OnInit {
 
       });
     } else {
-      // cierro valvula registro log riego
+      // cierro valvula y registro log riego
       const riego: Riego = new Riego(99, 0, formatted_date, this.dispositivo.electrovalvulaId);
       this.rServ.agregarRiego(riego).then((riego) => {
         console.log(riego);
@@ -180,6 +180,10 @@ export class DetalleSensorPage implements OnInit {
       this.mServ.agregarMedicion(a).then((med) => {
         console.log(med);
         console.log(random);
+
+        // actualizo valor y gráfico
+        this.valorObtenido = Number(a.valor);
+        this.generarChart();
       });
     }
     this.estadoValvula = !this.estadoValvula;
