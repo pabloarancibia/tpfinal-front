@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DetalleSensorPageRoutingModule } from './detalle-sensor-routing.module';
 
 import { DetalleSensorPage } from './detalle-sensor.page';
+import { MouseBackColorDirective } from '../directivas/mouse-back-color.directive';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { DetalleSensorPage } from './detalle-sensor.page';
     IonicModule,
     DetalleSensorPageRoutingModule
   ],
-  declarations: [DetalleSensorPage]
+  declarations: [DetalleSensorPage, MouseBackColorDirective]
 })
-export class DetalleSensorPageModule {}
+export class DetalleSensorPageModule { }

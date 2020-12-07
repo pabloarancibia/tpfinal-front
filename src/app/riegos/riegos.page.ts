@@ -25,6 +25,7 @@ export class RiegosPage implements OnInit {
       this.riegos = riegos;
       this.nomValvula = this.riegos[0].electrovalvulaId;
       console.log(this.riegos);
+
     });
   }
 

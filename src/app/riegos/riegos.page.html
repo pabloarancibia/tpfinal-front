@@ -22,7 +22,7 @@
   <ion-grid *ngFor="let r of this.riegos">
     <ion-row>
       <ion-col>
-        {{r.apertura}}
+        {{r.apertura | aperturaPipe}}
       </ion-col>
       <ion-col>
         {{r.fecha | date: 'dd/MM/yyyy H:mm' }}

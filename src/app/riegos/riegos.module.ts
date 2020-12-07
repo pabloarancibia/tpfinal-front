@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { RiegosPageRoutingModule } from './riegos-routing.module';
 
 import { RiegosPage } from './riegos.page';
+import { AperturaPipePipe } from '../pipes/apertura-pipe.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { RiegosPage } from './riegos.page';
     IonicModule,
     RiegosPageRoutingModule
   ],
-  declarations: [RiegosPage]
+  declarations: [RiegosPage, AperturaPipePipe]
 })
-export class RiegosPageModule {}
+export class RiegosPageModule { }

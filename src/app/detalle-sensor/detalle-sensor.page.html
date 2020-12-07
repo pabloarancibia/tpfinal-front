@@ -16,19 +16,26 @@
   <div id="highcharts" style="width:100%; height:300px;"></div>
 
   <!-- buttons -->
-  <div *ngIf="this.estadoValvula==false">
-    <ion-button (click)='accionarValvula()'>ABRIR ELECTROVÁLVULA</ion-button>
-  </div>
-  <div *ngIf="this.estadoValvula==true">
-    <ion-button color="danger" (click)='accionarValvula()'>CERRAR ELECTROVÁLVULA</ion-button>
-  </div>
-  <ion-button *ngIf="this.idDispositivo" routerLink="/mediciones/{{this.idDispositivo}}" routerDirection="root">
-    VER TODAS LAS MEDICIONES
-  </ion-button>
+  <div class="centrado">
+    <div appMouseBackColor *ngIf="this.estadoValvula==false">
+      <ion-button appMouseBackColor (click)='accionarValvula()'>ABRIR ELECTROVÁLVULA</ion-button>
+    </div>
+    <div appMouseBackColor *ngIf="this.estadoValvula==true">
+      <ion-button color="danger" (click)='accionarValvula()'>CERRAR ELECTROVÁLVULA</ion-button>
+    </div>
+    <div appMouseBackColor *ngIf="this.idDispositivo">
+      <ion-button routerLink="/mediciones/{{this.idDispositivo}}" routerDirection="root">
+        VER TODAS LAS MEDICIONES
+      </ion-button>
+    </div>
 
-  <ion-button *ngIf="this.dispositivo" routerLink="/riegos/{{this.dispositivo.electrovalvulaId}}"
-    routerDirection="root">VER LOG RIEGOS
-  </ion-button>
+    <div appMouseBackColor *ngIf="this.dispositivo">
+      <ion-button *ngIf="this.dispositivo" routerLink="/riegos/{{this.dispositivo.electrovalvulaId}}"
+        routerDirection="root">VER LOG RIEGOS
+      </ion-button>
+    </div>
+  </div>
+
 
 
 
